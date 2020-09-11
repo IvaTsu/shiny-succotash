@@ -2,19 +2,31 @@
   "name": "shiny-succotash",
   "version": "0.0.1",
   "description": "React, TypeScript, GraphQL boilerplate",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/index.js",
+    "watch": "tsc -w",
+    "dev": "yarn build && concurrently \"yarn watch\" \"nodemon dist/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IvaTsu/shiny-succotash.git"
   },
-  "keywords": ["React, TypeScript, GraphQL"],
+  "keywords": [
+    "React, TypeScript, GraphQL, Yarn"
+  ],
   "author": "Ivan Tsud",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IvaTsu/shiny-succotash/issues"
   },
-  "homepage": "https://github.com/IvaTsu/shiny-succotash#readme"
+  "homepage": "https://github.com/IvaTsu/shiny-succotash#readme",
+  "devDependencies": {
+    "@types/node": "^14.10.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.2",
+    "concurrently": "^5.3.0"
+  }
 }
