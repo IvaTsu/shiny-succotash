@@ -1,0 +1,20 @@
+{
+  "name": "shiny-succotash",
+  "version": "0.0.1",
+  "description": "React, TypeScript, GraphQL boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvaTsu/shiny-succotash.git"
+  },
+  "keywords": ["React, TypeScript, GraphQL"],
+  "author": "Ivan Tsud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvaTsu/shiny-succotash/issues"
+  },
+  "homepage": "https://github.com/IvaTsu/shiny-succotash#readme"
+}
