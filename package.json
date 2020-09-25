@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "yarn build && node dist/index.js",
     "watch": "tsc -w",
-    "dev": "yarn build && concurrently \"yarn watch\" \"nodemon dist/index.js\"",
+    "dev": "yarn build && concurrently --kill-others \"yarn watch\" \"nodemon dist/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,8 +25,24 @@
   "homepage": "https://github.com/IvaTsu/shiny-succotash#readme",
   "devDependencies": {
     "@types/node": "^14.10.0",
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.4",
-    "typescript": "^4.0.2",
-    "concurrently": "^5.3.0"
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "^4.0.1",
+    "@mikro-orm/core": "^4.0.1",
+    "@mikro-orm/migrations": "^4.0.1",
+    "@mikro-orm/postgresql": "^4.0.1",
+    "dotenv": "^8.2.0",
+    "pg": "^8.3.3"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
   }
 }
